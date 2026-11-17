@@ -67,7 +67,7 @@
       },[]);
       useFrame((_state,delta)=>{
         if(!group.current)return;
-        const target=window.innerWidth<720?.08:.56;
+        const target = window.innerWidth < 720 ? 0.08 : 0.56;
         group.current.position.x+=(target+pointerX*.13-group.current.position.x)*.025;
         group.current.position.y+=(pointerY*.12-group.current.position.y)*.025;
         group.current.scale.setScalar(1-scrollProgress*.12);
